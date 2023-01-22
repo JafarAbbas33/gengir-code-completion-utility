@@ -63,6 +63,7 @@ If you are using this repo then you need python3 executable or if from official 
 
 ### The below packages might be required
 `Python3 venv:` sudo apt install python3.8-venv
+
 `Poetry:` curl -sSL https://install.python-poetry.org | python3 -
 
 ### If you want to check what other packages can be installed
