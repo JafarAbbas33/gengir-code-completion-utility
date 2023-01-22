@@ -62,9 +62,9 @@ If you are using this repo then you need python3 executable or if from official 
 ```
 
 ### The below packages might be required
-`Python3 venv:` sudo apt install python3.8-venv
+Python3 venv: `sudo apt install python3.8-venv`
 
-`Poetry:` curl -sSL https://install.python-poetry.org | python3 -
+Poetry: `curl -sSL https://install.python-poetry.org | python3 -`
 
 ### If you want to check what other packages can be installed
 Go to directory `/usr/share/gir-1.0/`
@@ -78,7 +78,7 @@ sudo apt remove cargo
 sudo apt autoremove
 ```
 
-### Below is the output of one of the commands running `./gengir WebKit2WebExtension-4.0`
+### Below is the output of one of the commands running: `./gengir WebKit2WebExtension-4.0`
 ```creating gi-stubs tree in ~/.local/lib/python3.8/site-packages/gi-stubs
 WebKit2WebExtension v4.0
 | Gtk v3.0
