@@ -36,19 +36,19 @@ The `*.gir` with the type info files should be included with each GNOME library 
 If you wanted to install stubs for libadwaita, run `gengir Adw-1`. If you're using a venv you'll need to run gengir inside the venv. With poetry for example just run `poetry run gengir Module-x`.
 
 ### Install Rust
-curl https://sh.rustup.rs -sSf | sh
+`curl https://sh.rustup.rs -sSf | sh`
 
 ### Clone official repo
-git clone https://github.com/santiagocezar/gengir.git
+`git clone https://github.com/santiagocezar/gengir.git`
 
 ### Build the cloned repo
-cargo build --release
+`cargo build --release`
 
 ### If you get error: File or directory not found
 If you are using this repo then you need python3 executable or if from official repo then python executable. You probably don't have python installed or you have python3 only, not python. Gengir tries to run `python -c "xxx"` so either change your python3 name to python or install python so that Gengir can find the `python` executable.
 
 ### Start installation of various `code completions` code
-./gengir Gtk-3.0
+```./gengir Gtk-3.0
 ./gengir Gdk-3.0
 ./gengir Gio-2.0
 ./gengir GiRepository-2.0
@@ -59,6 +59,7 @@ If you are using this repo then you need python3 executable or if from official 
 ./gengir GObject-2.0
 ./gengir WebKit2-4.0
 ./gengir WebKit2WebExtension-4.0
+```
 
 ### The below packages might be required
 `Python3 venv:` sudo apt install python3.8-venv
@@ -68,15 +69,16 @@ If you are using this repo then you need python3 executable or if from official 
 Go to directory `/usr/share/gir-1.0/`
 
 ### Already have Gengir binary and *.git files? Do:
-mv ./target/release/gir-1.0 /usr/share/
+`mv ./target/release/gir-1.0 /usr/share/`
 
 ### Uninstalling rust can be done by
-rustup self uninstall
+```rustup self uninstall
 sudo apt remove cargo
 sudo apt autoremove
+```
 
 ### Below is the output of one of the commands running `./gengir WebKit2WebExtension-4.0`
-creating gi-stubs tree in ~/.local/lib/python3.8/site-packages/gi-stubs
+```creating gi-stubs tree in ~/.local/lib/python3.8/site-packages/gi-stubs
 WebKit2WebExtension v4.0
 | Gtk v3.0
 | | Atk v1.0
@@ -91,7 +93,7 @@ WebKit2WebExtension v4.0
 | | xlib v2.0
 | JavaScriptCore v4.0
 | Soup v2.4
-
+```
 
 ## Editor support
 
