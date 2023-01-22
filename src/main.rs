@@ -56,7 +56,7 @@ fn create_stub_tree(dir: &PathBuf) -> io::Result<()> {
 }
 
 fn get_sitepackages() -> PathBuf {
-    let out = Command::new("python")
+    let out = Command::new("python3")
         .arg("-c")
         .arg("import site, os; sp = site.getsitepackages()[0]; print(sp if os.access(sp, os.W_OK | os.X_OK) else site.getusersitepackages(), end='')")
         .output().unwrap();

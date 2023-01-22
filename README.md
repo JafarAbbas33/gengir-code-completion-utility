@@ -35,20 +35,63 @@ The `*.gir` with the type info files should be included with each GNOME library 
 
 If you wanted to install stubs for libadwaita, run `gengir Adw-1`. If you're using a venv you'll need to run gengir inside the venv. With poetry for example just run `poetry run gengir Module-x`.
 
-```
-USAGE:
-    gengir [OPTIONS] [MODULES]...
+### Install Rust
+curl https://sh.rustup.rs -sSf | sh
 
-ARGS:
-    <MODULES>...    Modules to generate typing stubs for. (e.g. Adw-1 GtkSource-5)
+### Clone official repo
+git clone https://github.com/santiagocezar/gengir.git
 
-OPTIONS:
-    -h, --help                 Print help information
-    -n, --no-docs              Exclude docstrings in the typings
-    -o, --out-dir <OUT_DIR>    
-    -V, --version              Print version information
+### Build the cloned repo
+cargo build --release
 
-```
+### If you get error: File or directory not found
+If you are using this repo then you need python3 executable or if from official repo then python executable. You probably don't have python installed or you have python3 only, not python. Gengir tries to run `python -c "xxx"` so either change your python3 name to python or install python so that Gengir can find the `python` executable.
+
+### Start installation of various `code completions` code
+./gengir Gtk-3.0
+./gengir Gdk-3.0
+./gengir Gio-2.0
+./gengir GiRepository-2.0
+./gengir GIRepository-2.0
+./gengir GL-1.0
+./gengir GLib-2.0
+./gengir GModule-2.0
+./gengir GObject-2.0
+./gengir WebKit2-4.0
+./gengir WebKit2WebExtension-4.0
+
+### The below packages might be required
+`Python3 venv:` sudo apt install python3.8-venv
+`Poetry:` curl -sSL https://install.python-poetry.org | python3 -
+
+### If you want to check what other packages can be installed
+Go to directory `/usr/share/gir-1.0/`
+
+### Already have Gengir binary and *.git files? Do:
+mv ./target/release/gir-1.0 /usr/share/
+
+### Uninstalling rust can be done by
+rustup self uninstall
+sudo apt remove cargo
+sudo apt autoremove
+
+### Below is the output of one of the commands running `./gengir WebKit2WebExtension-4.0`
+creating gi-stubs tree in ~/.local/lib/python3.8/site-packages/gi-stubs
+WebKit2WebExtension v4.0
+| Gtk v3.0
+| | Atk v1.0
+| | | GObject v2.0
+| | | | GLib v2.0
+| | Gdk v3.0
+| | | GdkPixbuf v2.0
+| | | | GModule v2.0
+| | | | Gio v2.0
+| | | Pango v1.0
+| | | | cairo v1.0
+| | xlib v2.0
+| JavaScriptCore v4.0
+| Soup v2.4
+
 
 ## Editor support
 
