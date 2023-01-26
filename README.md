@@ -73,7 +73,8 @@ Go to directory `/usr/share/gir-1.0/`
 `mv ./target/release/gir-1.0 /usr/share/`
 
 ### Uninstalling rust can be done by
-```rustup self uninstall
+```
+rustup self uninstall
 sudo apt remove cargo
 sudo apt autoremove
 ```
