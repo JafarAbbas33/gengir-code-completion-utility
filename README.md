@@ -78,6 +78,12 @@ sudo apt remove cargo
 sudo apt autoremove
 ```
 
+### Uninstalling poetry can be done by
+```
+curl -sSL https://install.python-poetry.org | python3 - --uninstall
+curl -sSL https://install.python-poetry.org | POETRY_UNINSTALL=1 python3 -
+```
+
 ### Below is the output of one of the commands running: `./gengir WebKit2WebExtension-4.0`
 ```creating gi-stubs tree in ~/.local/lib/python3.8/site-packages/gi-stubs
 WebKit2WebExtension v4.0
